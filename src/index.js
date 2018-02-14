@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
+import _ from 'lodash';
 
 import YOUTUBE_API_KEY from './components/keys'
 import SearchBar from './components/search_bar';
@@ -31,9 +32,11 @@ class App extends Component {
     });
   }
   render() {
+    //using debounce to call new search term every 300ms
+    const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
     return(
       <div>
-        <SearchBar onSearchTermChanged={term => this.videoSearch(term)}/>
+        <SearchBar onSearchTermChanged={videoSearch}/>
         <VideoDetail video={this.state.selectedVideo}/>
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo})}
