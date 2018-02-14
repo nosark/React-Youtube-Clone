@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
 
-import YOUTUBE_API_KEY from './components/keys'
+import YOUTUBE_API_KEY from './keys'
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
