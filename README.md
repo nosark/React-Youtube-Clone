@@ -1,7 +1,7 @@
 I created this project while working through a udemy course
 
 # link to the course
-Interested in learning [Redux](https://www.udemy.com/react-redux/)
+Interested in learning redux through Udemy? [Click Here!](https://www.udemy.com/react-redux/)
 
 #### Want to check out my project?
 clone the repo and follow the instructions below
